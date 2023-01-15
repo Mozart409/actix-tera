@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% block head %}
+    <link rel="stylesheet" href="./static/style.css" />
+
+    <link rel="icon" href="https://fav.farm/🌶" />
+    <title>{% block title %}{% endblock title %} - My Webpage</title>
+    {% endblock head %}
+  </head>
+  <body>
+    <div id="content">{% block content %}{% endblock content %}</div>
+    <div id="footer">
+      {% block footer %} &copy; Copyright {{ now() | date(format="%Y")}} by
+      <a href="http://domain.invalid/">you</a>. {% endblock footer %}
+    </div>
+  </body>
+</html>
